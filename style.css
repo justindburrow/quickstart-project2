@@ -1,9 +1,11 @@
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: black;
+  color: white;
 }
 
 .container {
@@ -15,7 +17,6 @@ body {
 
 h1 {
   margin-bottom: 20px;
-  color: white;
 }
 
 form {
@@ -27,7 +28,7 @@ form {
 input {
   width: 70%;
   padding: 10px;
-  font-size: 32px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -46,14 +47,52 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Styling for the results grid */
 #results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* Start with 4 columns for large screens */
+  gap: 16px; /* Adds spacing between items */
+  padding: 0 10px; /* Adds a 10px margin on the sides */
+  justify-content: center; /* Centers the grid items */
 }
 
+/* Styling for each GIF image */
 #results-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  display: block;
+  max-width: none; /* Keeps the original Giphy size */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Responsive behavior for medium screens (3 columns) */
+@media (max-width: 992px) {
+  #results-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+/* Responsive behavior for small screens (2 columns) */
+@media (max-width: 768px) {
+  #results-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+}
+
+/* Responsive behavior for screens smaller than 720px (1 column) */
+@media (max-width: 720px) {
+  #results-grid {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+    justify-items: center; /* Centers the GIFs horizontally */
+  }
+
+  form {
+    flex-direction: column; /* Stack the search bar and button */
+    align-items: center; /* Center the content */
+  }
+
+  #search-input {
+    width: 100%; /* Full width for the input */
+    margin-bottom: 10px; /* Add spacing between input and button */
+  }
 }
