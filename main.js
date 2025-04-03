@@ -7,7 +7,7 @@ const resultsGrid = document.getElementById('results-grid');
 const btnReactions = document.getElementById('btn-reactions');
 const btnEntertainment = document.getElementById('btn-entertainment');
 const btnSports = document.getElementById('btn-sports');
-const btnStickers = document.getElementById('btn-stickers');
+const btnAnimals = document.getElementById('btn-animals');
 
 // Function to fetch and display GIFs based on a category or keyword
 async function fetchGifs(endpoint, query = '') {
@@ -52,7 +52,7 @@ form.addEventListener('submit', (event) => {
 btnReactions.addEventListener('click', () => fetchGifs('search', 'reactions'));
 btnEntertainment.addEventListener('click', () => fetchGifs('search', 'entertainment'));
 btnSports.addEventListener('click', () => fetchGifs('search', 'sports'));
-btnStickers.addEventListener('click', () => fetchGifs('search', 'stickers'));
+btnAnimals.addEventListener('click', () => fetchGifs('search', 'animals'));
 
 // Fetch and display trending GIFs on page load
 fetchGifs('trending');
