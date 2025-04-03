@@ -16,40 +16,67 @@ body {
 }
 
 h1 {
-  margin: 0; /* Remove default margin */
-  font-size: 48px; /* Adjust font size for better visibility */
-  background: linear-gradient(180deg, #ff00ff, #00ffff, #ff00ff); /* Neon gradient */
-  background-clip: text; /* Standard property for compatibility */
-  -webkit-background-clip: text; /* Clips the gradient to the text */
-  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
-  text-align: center; /* Centers the title horizontally */
+  margin: 0; 
+  font-size: 48px; 
+  background: linear-gradient(180deg, #ff00ff, #00ffff, #ff00ff); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  text-align: center; 
   font-weight: bold;
 }
 
 /* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Centers the content vertically */
+  justify-content: center; 
+  align-items: center; 
   padding: 10px 20px;
 }
 
-/* Navbar button styling */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+/* Navbar dropdown styling for smaller screens */
+.navbar-collapse {
+  justify-content: center; /* Center the dropdown items */
+}
+
+.navbar-nav {
+  text-align: center; /* Center the dropdown links */
+}
+
+.navbar-nav .nav-item {
+  margin: 5px 0; /* Add spacing between dropdown items */
+}
+
 .navbar-nav .nav-item .btn {
   position: relative;
   overflow: hidden;
-  font-size: 20px; /* Larger font size for better visibility */
-  padding: 14px 28px; /* Larger padding for bigger buttons */
-  background-color: transparent; /* Remove background color */
-  color: white; /* Keep the text color white */
-  border: none; /* Remove border */
+  font-size: 20px; 
+  padding: 14px 28px; 
+  background-color: transparent; 
+  color: white; 
+  border: none; 
   border-radius: 4px;
   cursor: pointer;
 }
 
 .navbar-nav .nav-item .btn:hover {
-  background-color: transparent; /* Keep the background transparent on hover */
-  color: white; /* Keep the text color white */
+  background-color: transparent; 
+  color: white; 
 }
 
 .navbar-nav .nav-item .btn::after {
@@ -58,15 +85,15 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px; /* Thickness of the border */
-  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff); /* Neon gradient */
+  height: 4px; 
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff); 
   transition: transform 0.3s ease;
-  transform: scaleX(0); /* Initially hidden */
+  transform: scaleX(0); 
   transform-origin: right;
 }
 
 .navbar-nav .nav-item .btn:hover::after {
-  transform: scaleX(1); /* Expand the border on hover */
+  transform: scaleX(1); 
   transform-origin: left;
 }
 
@@ -78,82 +105,110 @@ h1 {
 }
 
 #search-input {
-  width: 60%; /* Make the input wider */
-  padding: 15px; /* Add more padding for prominence */
-  font-size: 18px; /* Increase font size */
-  border: 1px solid #ac47e7; /* Add a neon border */
-  border-radius: 8px; /* Rounded corners */
-  outline: none; /* Remove default outline */
+  width: 60%; 
+  padding: 15px; 
+  font-size: 18px; 
+  border: 1px solid #ac47e7; 
+  border-radius: 8px; 
+  outline: none; 
 }
 
 #search-input:focus {
-  border-color: #8436b2; /* Slightly darker neon color on focus */
-  box-shadow: 0 0 10px #ac47e7; /* Add a glowing effect */
+  border-color: #8436b2; 
+  box-shadow: 0 0 10px #ac47e7; 
 }
 
 /* Search button styling */
 .searchbutton {
-  padding: 15px 30px; /* Larger padding for a bigger button */
-  font-size: 20px; /* Increase font size */
-  background-color: #ac47e7; /* Neon background color */
-  color: black; /* Adjust text color for contrast */
+  padding: 15px 30px; 
+  font-size: 20px; 
+  background-color: #ac47e7; 
+  color: black; 
   border: none;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   cursor: pointer;
-  margin-left: 10px; /* Add spacing between input and button */
+  margin-left: 10px; 
 }
 
 .searchbutton:hover {
-  background-color: #8436b2; /* Slightly darker shade for hover effect */
-  box-shadow: 0 0 10px #ac47e7; /* Add a glowing effect on hover */
+  background-color: #8436b2; 
+  box-shadow: 0 0 10px #ac47e7; 
 }
 
 /* Styling for the results grid */
 #results-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Start with 4 columns for large screens */
-  gap: 16px; /* Adds spacing between items */
-  padding: 0 10px; /* Adds a 10px margin on the sides */
-  justify-content: center; /* Centers the grid items */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px; 
+  padding: 0 10px; 
+  justify-content: center; 
 }
 
 /* Styling for each GIF image */
 #results-grid img {
   display: block;
-  max-width: none; /* Keeps the original Giphy size */
-  height: auto; /* Maintains the aspect ratio */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  max-width: none; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 /* Responsive behavior for medium screens (3 columns) */
 @media (max-width: 992px) {
   #results-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 /* Responsive behavior for small screens (2 columns) */
 @media (max-width: 768px) {
   #results-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 /* Responsive behavior for screens smaller than 720px (1 column) */
 @media (max-width: 720px) {
   #results-grid {
-    grid-template-columns: 1fr; /* 1 column for smaller screens */
-    justify-items: center; /* Centers the GIFs horizontally */
+    grid-template-columns: 1fr; 
+    justify-items: center; 
+    justify-content: center;
   }
 
+  #results-grid img {
+    display: block;
+    max-width: none; 
+    height: auto; 
+    margin: 0 auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+  .navbar {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .navbar-collapse {
+    justify-content: center; 
+    text-align: center; 
+  }
+
+  .navbar-nav {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0; 
+  }
   form {
-    flex-direction: column; /* Stack the search bar and button */
-    align-items: center; /* Center the content */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   #search-input {
-    width: 100%; /* Full width for the input */
-    margin-bottom: 10px; /* Add spacing between input and button */
+    width: 100%; 
+    margin-bottom: 10px; 
   }
 }
