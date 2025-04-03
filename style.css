@@ -78,19 +78,42 @@ h1 {
   transform-origin: left;
 }
 
+/* Search bar styling */
+#search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 60%; /* Make the input wider */
+  padding: 15px; /* Add more padding for prominence */
+  font-size: 18px; /* Increase font size */
+  border: 1px solid #ac47e7; /* Add a neon border */
+  border-radius: 8px; /* Rounded corners */
+  outline: none; /* Remove default outline */
+}
+
+#search-input:focus {
+  border-color: #8436b2; /* Slightly darker neon color on focus */
+  box-shadow: 0 0 10px #ac47e7; /* Add a glowing effect */
+}
+
 /* Search button styling */
 .searchbutton {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #7528e7; /* Change background to match #00ffff */
+  padding: 15px 30px; /* Larger padding for a bigger button */
+  font-size: 20px; /* Increase font size */
+  background-color: #ac47e7; /* Neon background color */
   color: black; /* Adjust text color for contrast */
   border: none;
-  border-radius: 4px;
+  border-radius: 8px; /* Rounded corners */
   cursor: pointer;
+  margin-left: 10px; /* Add spacing between input and button */
 }
 
 .searchbutton:hover {
-  background-color: #531ea4; /* Slightly darker shade for hover effect */
+  background-color: #8436b2; /* Slightly darker shade for hover effect */
+  box-shadow: 0 0 10px #ac47e7; /* Add a glowing effect on hover */
 }
 
 /* Styling for the results grid */
