@@ -1,4 +1,4 @@
-const API_KEY = 'YOUR_GIPHY_API_KEY'; // Replace with your Giphy API key
+const API_KEY = 'JZBPWw2q8LwA3RfHjBQfA0RRrnifKtzu'; // Replace with your Giphy API key
 const form = document.getElementById('search-form');
 const input = document.getElementById('search-input');
 const resultsGrid = document.getElementById('results-grid');
