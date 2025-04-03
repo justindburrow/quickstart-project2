@@ -19,6 +19,7 @@ h1 {
   margin: 0; /* Remove default margin */
   font-size: 48px; /* Adjust font size for better visibility */
   background: linear-gradient(180deg, #ff00ff, #00ffff, #ff00ff); /* Neon gradient */
+  background-clip: text; /* Standard property for compatibility */
   -webkit-background-clip: text; /* Clips the gradient to the text */
   -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
   text-align: center; /* Centers the title horizontally */
@@ -31,15 +32,6 @@ h1 {
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
   padding: 10px 20px;
-}
-
-.navbar-brand h1 {
-  margin: 0;
-  font-size: 36px; /* Adjust font size for the navbar */
-  background: linear-gradient(180deg, #ff00ff, #00ffff, #ff00ff); /* Neon gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
 }
 
 /* Navbar button styling */
