@@ -14,6 +14,14 @@ body {
   padding: 20px;
   text-align: center;
 }
+.results-container {
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
 
 h1 {
   margin: 0; 
@@ -137,78 +145,21 @@ h1 {
 
 /* Styling for the results grid */
 #results-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 16px; 
-  padding: 0 10px; 
-  justify-content: center; 
+  display: flex;
+  flex-wrap: wrap; /* Wrap items when the screen width is less than 600px */
+  padding: 10px; /* Add padding around the grid */
+  justify-content: center; /* Center the grid items horizontally */
+  margin: 0 auto; /* Center the grid container */
 }
 
 /* Styling for each GIF image */
 #results-grid img {
   display: block;
-  max-width: none; 
-  height: auto; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  width: auto; /* Keep the original width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  border-radius: 8px; /* Adds rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  margin: 0 auto;
 }
 
-/* Responsive behavior for medium screens (3 columns) */
-@media (max-width: 992px) {
-  #results-grid {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-}
-
-/* Responsive behavior for small screens (2 columns) */
-@media (max-width: 768px) {
-  #results-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-/* Responsive behavior for screens smaller than 720px (1 column) */
-@media (max-width: 720px) {
-  #results-grid {
-    grid-template-columns: 1fr; 
-    justify-items: center; 
-    justify-content: center;
-  }
-
-  #results-grid img {
-    display: block;
-    max-width: none; 
-    height: auto; 
-    margin: 0 auto; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-
-  .navbar {
-    flex-direction: column; 
-    align-items: center; 
-  }
-
-  .navbar-collapse {
-    justify-content: center; 
-    text-align: center; 
-  }
-
-  .navbar-nav {
-    width: 100%; 
-    text-align: center; 
-  }
-
-  .navbar-nav .nav-item {
-    margin: 5px 0; 
-  }
-  form {
-    flex-direction: column; 
-    align-items: center; 
-  }
-
-  #search-input {
-    width: 100%; 
-    margin-bottom: 10px; 
-  }
-}
