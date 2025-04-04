@@ -37,7 +37,7 @@ h1 {
 /* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: center; 
+  justify-content: space-between; 
   align-items: center; 
   padding: 10px 20px;
 }
@@ -70,11 +70,13 @@ h1 {
   margin: 5px 0; /* Add spacing between dropdown items */
 }
 
+
+
 .navbar-nav .nav-item .btn {
   position: relative;
   overflow: hidden;
   font-size: 20px; 
-  padding: 14px 28px; 
+  padding: 14px 15px; 
   background-color: transparent; 
   color: white; 
   border: none; 
@@ -103,6 +105,28 @@ h1 {
 .navbar-nav .nav-item .btn:hover::after {
   transform: scaleX(1); 
   transform-origin: left;
+}
+
+@media (max-width: 619px){
+ 
+  .navbar-collapse{
+      justify-content: center;
+      width: 100%;
+  }
+  .navbar-toggler{
+      margin:auto
+  }
+  .navbar-nav .hb-nav-link{
+      max-width: 80%;
+      width: 80%;
+      margin:auto;
+  text-align: center;
+  }
+
+  h1{
+      font-size: 33px;
+      text-align: center;
+  }
 }
 
 /* Search bar styling */
