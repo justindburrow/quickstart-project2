@@ -4,7 +4,7 @@ Justin Burrow
 
 https://github.com/justindburrow
 
-https://github.com/justindburrow/quickstart-project2
+https://justindburrow.github.io/quickstart-project2/
 
 This is a search page site built for a Quickstart coding bootcamp project.  This utilizes Giphy APA to seach the Giphy gif database and return the results.
 
